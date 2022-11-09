@@ -17,6 +17,7 @@
   --header-border: #ececec;
   --portfolio-border: 1px solid #eeeeee;
   --typical-margin: 50px;
+  --typical-gap: 30px;
 }
 
 body {
@@ -56,6 +57,11 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .section-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -76,7 +82,7 @@ body {
   |============================
 */
 
-.container.header {
+.header-container {
   display: flex;
   align-items: center;
 }
@@ -105,14 +111,12 @@ body {
   |============================
 */
 
-.nav{
+.nav {
   margin-left: 93px;
 }
 .site-nav {
-  display: flex;  
-}
-.site-nav .item:not(:last-child) {
-  margin-right: var(--typical-margin);
+  display: flex;
+  gap: 50px;
 }
 .site-nav .link {
   display: block;
@@ -134,10 +138,8 @@ body {
 }
 .auth-nav {
   display: flex;
+  gap: 50px;
   margin-left: auto;
-}
-.auth-nav .item:not(:last-child) {
-  margin-right: var(--typical-margin);
 }
 .auth-nav .link {
   display: block;
@@ -223,17 +225,15 @@ body {
 }
 .feature-list {
   display: flex;
+  gap: var(--typical-gap);
 }
 .feature-list p {
   line-height: 1.71;
   margin-top: 10px;
   margin-bottom: 0;
 }
-.feature-item{
-  flex-basis: calc((100% - 3*30px)/4);
-}
-.feature-item:not(:last-child) {
-  margin-right: 30px;
+.feature-item {
+  flex-basis: calc((100% - 3 * 30px) / 4);
 }
 /*
   |============================
@@ -247,16 +247,10 @@ body {
 .section-title.activity {
   margin-bottom: var(--typical-margin);
 }
-.activity.list {
+.activity-list {
   display: flex;
-}
-.activity-item:not(:last-child) {
-  margin-right: 30px;
-}
-.activity-item > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  flex-wrap: wrap;
+  gap: var(--typical-gap);
 }
 /*
   |============================
@@ -270,20 +264,16 @@ body {
 .section-title.team {
   margin-bottom: var(--typical-margin);
 }
-.team.list {
+.team-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: var(--typical-gap);
 }
 .team-item {
   text-align: center;
+  flex-basis: calc((100% - 3 * 30px) / 4);
 }
-.team-item:not(:last-child) {
-  margin-right: 30px;
-}
-.team-item > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+
 .team-member {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -351,7 +341,6 @@ body {
   | Portfolio
   |============================
 */
-
 .filter-button {
   border-radius: 4px;
   padding: 6px 25px;
@@ -374,28 +363,22 @@ body {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
-.filter.list {
+.filter-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   justify-content: center;
   margin-bottom: var(--typical-margin);
 }
-.filter-item:not(:last-child) {
-  margin-right: 8px;
-}
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
-.portfolio-link > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.portfolio-item:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
-.portfolio-item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
+
+.portfolio-item {
+  flex-basis: calc((100% - 2 * 30px) / 3);
 }
 .portfolio-description {
   padding: 20px 24px;
