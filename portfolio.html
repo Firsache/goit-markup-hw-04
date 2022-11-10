@@ -43,13 +43,21 @@
         </nav>
         <!-- Связаться -->
         <ul class="auth-nav list">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="link"
-              >info@devstudio.com</a
+          <li class="auth-nav-item">
+            <a href="mailto:info@devstudio.com" class="auth-nav-link link">
+              <svg class="auth-icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
             >
           </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+          <li class="auth-nav-item">
+            <a href="tel:+380961111111" class="auth-nav-link link">
+              <svg class="auth-icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
           </li>
         </ul>
       </div>
@@ -210,27 +218,64 @@
     </main>
     <!-- Футер -->
     <footer class="footer">
-      <div class="container">
-        <!-- Логотип сайта -->
-        <a href="./index.html" class="logo footer-logo"
-          ><span class="logo-accent">Web</span
-          ><span class="logo-footer">Studio</span></a
-        >
-        <address>
-          <p class="footer-address">м. Київ, пр-т Лесі Українки, 26</p>
-          <ul class="footer-list list">
-            <li class="footer-item">
-              <a href="mailto:info@devstudio.com" class="footer-link link"
-                >info@devstudio.com</a
-              >
+      <div class="container footer-container">
+        <div class="footer-contacts">
+          <!-- Логотип сайта -->
+          <a href="./index.html" class="logo footer-logo"
+            ><span class="logo-accent">Web</span
+            ><span class="logo-footer">Studio</span></a
+          >
+          <address>
+            <p class="footer-address">м. Київ, пр-т Лесі Українки, 26</p>
+            <ul class="footer-contacts-list list">
+              <li class="footer-contacts-item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="footer-contacts-link link"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="footer-contacts-item">
+                <a href="tel:+380961111111" class="footer-contacts-link link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-join">
+          <h2 class="join-title">Приєднуйтесь</h2>
+          <ul class="join-soc-list list">
+            <li class="join-soc-item">
+              <a href="" class="join-soc-link link">
+                <svg class="join-soc-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-social-instagram"></use>
+                </svg>
+              </a>
             </li>
-            <li class="footer-item">
-              <a href="tel:+380961111111" class="footer-link link"
-                >+38 096 111 11 11</a
-              >
+            <li class="join-soc-item">
+              <a href="" class="join-soc-link link">
+                <svg class="join-soc-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-social-twiter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="join-soc-item">
+              <a href="" class="join-soc-link link">
+                <svg class="join-soc-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-social-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="join-soc-item">
+              <a href="" class="join-soc-link link">
+                <svg class="join-soc-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-social-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
     </footer>
   </body>
